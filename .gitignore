@@ -1,0 +1,15 @@
+# Credenciales locales (cuenta de servicio, tokens, API keys)
+credentials/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Entornos virtuales
+.venv/
+venv/

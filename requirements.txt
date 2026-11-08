@@ -4,9 +4,9 @@
 # y el build desde fuente falla en 3.14 (pkg_resources / API de C).
 pandas==2.0.1
 numpy==1.26.4
-pyarrow==16.1.0
+pyarrow==23.0.1
 plotly==5.15.0
-streamlit==1.40.1
+streamlit==1.54.0
 
 # Pipeline de extracción
 apify-client==3.4.0

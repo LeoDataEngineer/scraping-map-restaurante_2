@@ -58,6 +58,23 @@ python src/run_etl.py --skip-transform   # solo extract
 El pipeline termina en `data/processed/`. No hay fase de carga a base de datos:
 las 6 tablas CSV son la capa de consumo del dashboard y del análisis.
 
+## Despliegue en Streamlit Community Cloud
+
+El proyecto debe ejecutarse con **Python 3.11**. Las versiones fijadas de
+`pandas==2.0.1`, `numpy==1.26.4` y `pyarrow==16.1.0` tienen wheels para 3.11,
+pero no para 3.12+; en 3.14 el build desde fuente falla con
+`ModuleNotFoundError: No module named 'pkg_resources'`.
+
+Si la app ya está desplegada con otra versión de Python, hay que **eliminarla y
+volver a desplegarla** (Streamlit no permite cambiar la versión de Python de una
+app existente):
+
+1. Anotar el subdominio, repo, rama, entrypoint y secrets actuales.
+2. Eliminar la app.
+3. Crear la app de nuevo con los mismos datos.
+4. En **Advanced settings → Python version**, elegir **3.11**.
+5. Desplegar.
+
 ## Agregar restaurantes
 
 1. Abre `src/etl/extract.py` y agrega el `place_id` de Google Maps a la lista `PLACES`.

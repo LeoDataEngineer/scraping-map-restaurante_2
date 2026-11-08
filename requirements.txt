@@ -1,5 +1,7 @@
 # Dependencias del pipeline y del dashboard
-# Versiones compatibles entre sí (NumPy 1.x + PyArrow 16 + Streamlit 1.40)
+# IMPORTANTE: usar Python 3.11 en Streamlit Community Cloud.
+# pandas 2.0.1 / numpy 1.26.4 / pyarrow 16.1.0 no tienen wheels para Python 3.12+
+# y el build desde fuente falla en 3.14 (pkg_resources / API de C).
 pandas==2.0.1
 numpy==1.26.4
 pyarrow==16.1.0
